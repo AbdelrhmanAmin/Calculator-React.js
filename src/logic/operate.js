@@ -1,21 +1,30 @@
 /* eslint-disable no-unused-vars */
 import Big from 'big.js';
 
-const Operate = (num1, num2, operation) => {
-  const n1 = Big(num1);
-  const n2 = Big(num2);
-  if (operation === '-') {
-    return n1 - n2;
-  } if (operation === '+') {
-    return n1 + n2;
-  } if (operation === '/' || operation === '÷') {
-    return n1 / n2;
-  } if (operation === '*') {
-    return n1 * n2;
-  } if (operation === '%') {
-    return n1 % n2;
+const Operate = (numberOne, numberTwo, operator) => {
+  const x = new Big(numberOne || 0);
+  const y = new Big(numberTwo || 0);
+  let result;
+  switch (operator) {
+    case '%':
+      result = x.div(100);
+      break;
+    case '÷':
+      result = x.div(y);
+      break;
+    case 'x':
+      result = x.times(y);
+      break;
+    case '+':
+      result = x.plus(y);
+      break;
+    case '-':
+      result = x.minus(y);
+      break;
+    default:
+      return 0;
   }
-  return null;
+  return result.toString();
 };
 
 export default Operate;
