@@ -10,7 +10,7 @@ Math Magicians Calculator is the first project from the React and Redux module f
 
 ## :red_circle: Live Demo:
 
-[Live demo](https://calculator-react-js.herokuapp.com//)
+[Live demo](https://calculator-react-js.herokuapp.com/)
 
 ## :construction_worker: Getting Started
 
