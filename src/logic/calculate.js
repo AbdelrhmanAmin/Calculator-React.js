@@ -8,7 +8,7 @@ const calculate = (dataObjt, buttonName) => {
   let { total = '', next = '', operation = '' } = dataObjt;
   if (!total) total = '';
   if (!next) next = '';
-  let btn = buttonName.target.firstChild.data;
+  let btn = buttonName.target ? buttonName.target.firstChild.data : buttonName;
   switch (btn) {
     case 'AC':
       total = '';
