@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 const Display = (props) => {
   const { total, opt, next } = props;
   return (
-    <div>
-      {parseInt(total, 10) || '0'}
-      {opt || ''}
-      {parseInt(next, 10) || ''}
+    <div className="display">
+      <strong className="display-strong">
+        {total || '0'}
+        {opt || ''}
+        {next || ''}
+      </strong>
     </div>
   );
 };

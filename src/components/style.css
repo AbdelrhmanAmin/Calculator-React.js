@@ -1,0 +1,48 @@
+/* App.js */
+.App {
+  width: 700px;
+  margin: 0 auto;
+}
+/* Display.js */
+.display {
+  height: 100px;
+  background-color: #858693;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.display-strong {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+/* ButtonPanel.js */
+.Panel-row,
+.Panel-row > Button {
+  height: 100px;
+}
+.Panel-row > Button {
+  width: 25%;
+  color: rgb(46, 46, 46);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #858693;
+}
+button:focus {
+  border: 2px solid #f5913e;
+  background-color: rgba(255, 255, 255, 0.658);
+  outline: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+.navbar ul li {
+  padding: 5px;
+}
