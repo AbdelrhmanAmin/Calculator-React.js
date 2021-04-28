@@ -3,7 +3,7 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import Calculate from '../logic/calculate';
+import calculate from '../logic/calculate';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,26 +15,23 @@ class App extends React.Component {
     };
   }
 
-  handleClick(btn) {
+  handleClick = (btn) => {
     const data = this.state;
-    const result = Calculate(data, btn);
-    this.setState({
-      total: result.total ? result.total : null,
-      next: result.next ? result.next : null,
-      operation: result.operation ? result.operation : null,
-    });
+    const result = calculate(data, btn);
+    this.setState(result);
+    console.log(this.state);
   }
 
   render() {
     const { total, next } = this.state;
     return (
-      <fragment>
+      <div>
         <h1>
-          Milestone #2
+          Calculator
         </h1>
         <Display value={next || total} />
-        <ButtonPanel handleClick={this.handleClick} />
-      </fragment>
+        <ButtonPanel clickHandler={this.handleClick} />
+      </div>
     );
   }
 }
