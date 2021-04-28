@@ -8,8 +8,8 @@ const ButtonPanel = (props) => {
     <div div>
       <div>
         <Button clickHandler={clickHandler} name="AC" />
-        <Button clickHandler={clickHandler} name="+" />
         <Button clickHandler={clickHandler} name="+/-" />
+        <Button clickHandler={clickHandler} name="%" />
         <Button clickHandler={clickHandler} name="÷" />
       </div>
       <div>

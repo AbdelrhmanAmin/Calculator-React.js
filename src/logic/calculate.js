@@ -1,3 +1,4 @@
+/* eslint-disable no-lonely-if */
 /* eslint-disable no-unused-vars */
 
 import operate from './operate';
@@ -6,7 +7,20 @@ const calculate = (dataObjt, buttonName) => {
   let { total = '', next = '', operation = '' } = dataObjt;
   if (!total) total = '';
   if (!next) next = '';
-  const btn = buttonName.target.firstChild.data;
+  let btn = buttonName.target.firstChild.data;
+  // if (btn === '.') {
+  //   if (operation === '' || !operation) {
+  //     if (!total.includes(btn)) {
+  //       total = `${total}${btn}`;
+  //     } else {
+  //       total = `${total}${btn}`;
+  //     }
+  //   } else {
+  //     if (!next.includes(btn)) {
+  //       next = `${next}${btn}`;
+  //     }
+  //   }
+  // }
   switch (btn) {
     case 'AC':
       total = '';
@@ -28,6 +42,12 @@ const calculate = (dataObjt, buttonName) => {
     case '8':
     case '9':
     case '.':
+      if (btn === '.' && total.includes(btn) && (operation === '' || !operation)) {
+        btn = '';
+      }
+      if (btn === '.' && next.includes(btn)) {
+        btn = '';
+      }
       if (operation === '' || !operation) { total = `${total}${btn}`; } else next = `${next}${btn}`;
       break;
     case '=':
