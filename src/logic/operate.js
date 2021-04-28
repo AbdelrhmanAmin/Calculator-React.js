@@ -15,6 +15,7 @@ const Operate = (num1, num2, operation) => {
   } if (operation === '%') {
     return n1 % n2;
   }
+  return null;
 };
 
 export default Operate;
