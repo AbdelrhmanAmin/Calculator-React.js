@@ -2,20 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = (props) => {
-  const { result } = props;
+  const { total, opt, next } = props;
   return (
     <div>
-      {result}
+      {parseInt(total, 10) || '0'}
+      {opt || ''}
+      {parseInt(next, 10) || ''}
     </div>
   );
 };
 
 Display.propTypes = {
-  result: PropTypes.string,
+  total: PropTypes.string,
+  opt: PropTypes.string,
+  next: PropTypes.string,
 };
 
 Display.defaultProps = {
-  result: '0',
+  total: '0',
+  opt: '',
+  next: '',
 };
 
 export default Display;
