@@ -10,6 +10,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
 .display-strong {
   font-size: 32px;
   color: white;
@@ -18,11 +19,11 @@
 }
 
 .Panel-row,
-.Panel-row > Button {
+button {
   height: 100px;
 }
 
-.Panel-row > Button {
+button {
   width: 25%;
   color: rgb(46, 46, 46);
   font-size: 16px;
