@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-lonely-if */
 /* eslint-disable no-unused-vars */
 
@@ -7,20 +8,7 @@ const calculate = (dataObjt, buttonName) => {
   let { total = '', next = '', operation = '' } = dataObjt;
   if (!total) total = '';
   if (!next) next = '';
-  let btn = buttonName.target.firstChild.data;
-  // if (btn === '.') {
-  //   if (operation === '' || !operation) {
-  //     if (!total.includes(btn)) {
-  //       total = `${total}${btn}`;
-  //     } else {
-  //       total = `${total}${btn}`;
-  //     }
-  //   } else {
-  //     if (!next.includes(btn)) {
-  //       next = `${next}${btn}`;
-  //     }
-  //   }
-  // }
+  let btn = buttonName.target ? buttonName.target.firstChild.data : buttonName;
   switch (btn) {
     case 'AC':
       total = '';
