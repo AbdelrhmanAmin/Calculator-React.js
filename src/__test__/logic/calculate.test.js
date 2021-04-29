@@ -66,5 +66,5 @@ describe('Calculate', () => {
     test('When AC is clicked, next isn\'t null', () => {
       expect(calc.next).not.toBe(null);
     });
-  })
+  });
 });
